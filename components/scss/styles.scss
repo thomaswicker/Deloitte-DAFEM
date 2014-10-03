@@ -1,0 +1,145 @@
+/*
+  _____ _                                __        ___      _             
+ |_   _| |__   ___  _ __ ___   __ _ ___  \ \      / (_) ___| | _____ _ __ 
+   | | | '_ \ / _ \| '_ ` _ \ / _` / __|  \ \ /\ / /| |/ __| |/ / _ \ '__|
+   | | | | | | (_) | | | | | | (_| \__ \   \ V  V / | | (__|   <  __/ |   
+   |_| |_| |_|\___/|_| |_| |_|\__,_|___/    \_/\_/  |_|\___|_|\_\___|_|                                                                           
+                                                                          */
+
+@charset "UTF-8";
+@import "compass";
+
+/*  
+
+----COMPASS MIXINS----
+ @include box-shadow($charcoal 3px 3px 5px); 
+ @include border-radius(0px);
+ @include transition(all 0.3s ease-in);
+ @include transform(rotate(0deg) skew(-10deg, -10deg));
+
+//xtra large range (1441px --> 1920px)
+@media only screen and (min-width: 64.063em) and (max-width: 90em) {
+	
+}
+
+//large range (1025px --> 1440px)
+@media only screen and (min-width: 64.063em) and (max-width: 90em) {
+	
+}
+
+//medium range (641px --> 1024px)
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+
+}
+
+//small range (0px --> 640px)
+@media only screen and (min-width: 0em) and (max-width: 40em) {
+	
+}
+ */
+
+/* -------------------------- BEGIN COLOR VARIABLES ------------------------ */
+
+$blue: #2a98c6;
+$black: #000000;
+$charcoal: #333333;
+$lightgray: #dddddd;
+$white: #FFFFFF;
+$default-border-radius: 0px;
+
+/* -------------------------- END COLOR VARIABLES -------------------------- */
+
+
+/* -------------------------- BEGIN FONT VARIABLES ------------------------- */
+
+$font1: 'Open Sans', sans-serif;
+$font2: Arial, Helvetica, sans-serif;
+$font3: 'Source Sans Pro', sans-serif;
+/* -------------------------- END FONT VARIABLES --------------------------- */
+
+
+/* -------------------------- BEGIN SASS PARTIALS -------------------------- */
+
+@import "cssreset";
+@import "foundation-overrides";
+@import "nav";
+@import "superhero";
+@import "about";
+
+/* -------------------------- END SASS PARTIALS ---------------------------- */
+
+
+html, body {
+	font-family: $font1;
+	padding: 0px;
+	margin: 0px;
+}
+
+.header {
+	font-size: 1.9em;
+	color: $blue;
+	font-family: $font3;
+	font-weight: 400;	
+	text-transform: uppercase;
+}
+
+.body-main-left {
+	background-color: $white;
+	height: 1000px;
+
+	h2 {
+		padding: 1.5em 0em 0em 1.2em;
+	}
+}
+
+.body-main-right {
+	background-color: $white;
+	height: 1000px;
+	border-left: 1px solid $lightgray;
+	padding: 0px;
+}
+
+.social-media-box {
+	float: left;
+	border-bottom: 1px solid $lightgray;
+	padding: 0px 0px 10px 0px;
+	text-align: center;
+	background-color: #eeeeee;
+
+	a {
+		float: left;
+		clear: right;
+		background-color: lighten($charcoal, 20%);
+		width: 40px;
+		height: 40px;
+		text-align: center;
+		margin: 10px 8px 0px 0px;
+		padding: 7px 0px 0px 0px;
+
+		&:hover {
+			background-color: lighten($charcoal, 40%);
+
+			i {}
+		}
+
+		i {
+			font-size: 1.8rem;
+			color: $white;
+		}
+	}
+}
+
+.social-media-box-container {
+	width: 338px;
+	height: 50px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0px;
+}
+
+.social-feed {
+	h2 {
+		padding: 1.2em 0em 0em 1em;
+	}
+}
+

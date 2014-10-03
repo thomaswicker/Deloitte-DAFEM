@@ -1,0 +1,12 @@
+# Ignore files
+*.json
+*.codekit
+*.rb
+*.ai
+*.psd
+*.docx
+*.doc
+*.sublime-project
+*.sublime-workspace
+*.DS-Store
+*.sass-cache
