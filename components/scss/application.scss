@@ -57,6 +57,7 @@ $font3: 'Source Sans Pro', sans-serif;
 @import "colors";
 @import "foundation-overrides";
 @import "nav";
+@import "smoothDivScroll";
 
 /* -------------------------- END SASS PARTIALS ---------------------------- */
 
@@ -69,7 +70,7 @@ html, body {
 }
 
 .container-main {
-	min-height: 1000px;
+	min-height: 800px;
 	margin-top: 2em;
 	margin-right: auto;
 	margin-bottom: 2em;
