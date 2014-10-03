@@ -1,0 +1,194 @@
+/*
+   ____    _    _____ _____ __  __ 
+ |  _ \  / \  |  ___| ____|  \/  |
+ | | | |/ _ \ | |_  |  _| | |\/| |
+ | |_| / ___ \|  _| | |___| |  | |
+ |____/_/   \_\_|   |_____|_|  |_|
+                                  
+*/
+/*  
+
+----COMPASS MIXINS----
+ @include box-shadow($charcoal 3px 3px 5px); 
+ @include border-radius(0px);
+ @include transition(all 0.3s ease-in);
+ @include transform(rotate(0deg) skew(-10deg, -10deg));
+
+//xtra large range (1441px --> 1920px)
+@media only screen and (min-width: 64.063em) and (max-width: 90em) {
+	
+}
+
+//large range (1025px --> 1440px)
+@media only screen and (min-width: 64.063em) and (max-width: 90em) {
+	
+}
+
+//medium range (641px --> 1024px)
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+
+}
+
+//small range (0px --> 640px)
+@media only screen and (min-width: 0em) and (max-width: 40em) {
+	
+}
+ */
+/* -------------------------- BEGIN FONT VARIABLES ------------------------- */
+/* -------------------------- END FONT VARIABLES --------------------------- */
+/* -------------------------- BEGIN SASS PARTIALS -------------------------- */
+/* ========================================================
+   BEGIN CSS RESET
+   ======================================================== */
+/* line 6, ../components/scss/_cssreset.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+/* line 28, ../components/scss/_cssreset.scss */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+/* line 33, ../components/scss/_cssreset.scss */
+body {
+  line-height: 1; }
+
+/* line 37, ../components/scss/_cssreset.scss */
+ol, ul {
+  list-style: none; }
+
+/* line 41, ../components/scss/_cssreset.scss */
+blockquote, q {
+  quotes: none; }
+
+/* line 45, ../components/scss/_cssreset.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+/* line 51, ../components/scss/_cssreset.scss */
+blockquote {
+  font-size: 2.2em !important;
+  color: #999999; }
+
+/* line 56, ../components/scss/_cssreset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* ========================================================
+   END CSS RESET
+   ======================================================== */
+/*
+   ____ ___  _     ___  ____  ____  
+  / ___/ _ \| |   / _ \|  _ \/ ___| 
+ | |  | | | | |  | | | | |_) \___ \ 
+ | |__| |_| | |__| |_| |  _ < ___) |
+  \____\___/|_____\___/|_| \_\____/ 
+                                                                     
+*/
+/*
+  _____ ___  _   _ _   _ ____    _  _____ ___ ___  _   _    _____     _______ ____  ____  ___ ____  _____ ____  
+ |  ___/ _ \| | | | \ | |  _ \  / \|_   _|_ _/ _ \| \ | |  / _ \ \   / / ____|  _ \|  _ \|_ _|  _ \| ____/ ___| 
+ | |_ | | | | | | |  \| | | | |/ _ \ | |  | | | | |  \| | | | | \ \ / /|  _| | |_) | |_) || || | | |  _| \___ \ 
+ |  _|| |_| | |_| | |\  | |_| / ___ \| |  | | |_| | |\  | | |_| |\ V / | |___|  _ <|  _ < | || |_| | |___ ___) |
+ |_|   \___/ \___/|_| \_|____/_/   \_\_| |___\___/|_| \_|  \___/  \_/  |_____|_| \_\_| \_\___|____/|_____|____/ 
+                                                                                                                                                                                    
+*/
+/* line 11, ../components/scss/_foundation-overrides.scss */
+.row {
+  margin: 0px;
+  padding: 0px; }
+
+/* line 16, ../components/scss/_foundation-overrides.scss */
+.inner-wrap {
+  min-height: 1000px; }
+
+/* line 20, ../components/scss/_foundation-overrides.scss */
+.left-off-canvas-toggle {
+  float: left; }
+
+/*
+  _   _    ___     _____ ____    _  _____ ___ ___  _   _ 
+ | \ | |  / \ \   / /_ _/ ___|  / \|_   _|_ _/ _ \| \ | |
+ |  \| | / _ \ \ / / | | |  _  / _ \ | |  | | | | |  \| |
+ | |\  |/ ___ \ V /  | | |_| |/ ___ \| |  | | |_| | |\  |
+ |_| \_/_/   \_\_/  |___\____/_/   \_\_| |___\___/|_| \_|
+                                                                                                                                                                                                                                          
+*/
+/* line 10, ../components/scss/_nav.scss */
+.right-off-canvas-toggle {
+  float: right; }
+
+/* line 15, ../components/scss/_nav.scss */
+.top-nav {
+  width: 100%;
+  height: 40px;
+  padding: 0px; }
+
+/* line 21, ../components/scss/_nav.scss */
+.top-nav-left {
+  float: left;
+  width: 25%;
+  height: 40px;
+  padding: 0px;
+  margin: 0px; }
+
+/* line 29, ../components/scss/_nav.scss */
+.top-nav-center {
+  float: left;
+  width: 50%;
+  height: 40px;
+  padding: 0px;
+  margin: 0px;
+  text-align: center; }
+
+/* line 38, ../components/scss/_nav.scss */
+.top-nav-right {
+  float: left;
+  width: 25%;
+  height: 40px;
+  padding: 0px;
+  margin: 0px; }
+
+/* -------------------------- END SASS PARTIALS ---------------------------- */
+/* line 64, ../components/scss/application.scss */
+html, body {
+  font-family: "Open Sans", sans-serif;
+  padding: 0px;
+  margin: 0px;
+  background-color: #002776; }
+
+/* line 71, ../components/scss/application.scss */
+.container-main {
+  min-height: 1000px;
+  margin-top: 2em;
+  margin-right: auto;
+  margin-bottom: 2em;
+  margin-left: auto;
+  padding: 0px;
+  max-width: 1100px;
+  background-image: url("../img/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+/*# sourceMappingURL=application.css.map */

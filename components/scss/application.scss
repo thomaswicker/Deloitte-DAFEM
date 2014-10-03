@@ -1,0 +1,84 @@
+/*
+   ____    _    _____ _____ __  __ 
+ |  _ \  / \  |  ___| ____|  \/  |
+ | | | |/ _ \ | |_  |  _| | |\/| |
+ | |_| / ___ \|  _| | |___| |  | |
+ |____/_/   \_\_|   |_____|_|  |_|
+                                  
+*/
+
+@charset "UTF-8";
+@import "compass";
+
+/*  
+
+----COMPASS MIXINS----
+ @include box-shadow($charcoal 3px 3px 5px); 
+ @include border-radius(0px);
+ @include transition(all 0.3s ease-in);
+ @include transform(rotate(0deg) skew(-10deg, -10deg));
+
+//xtra large range (1441px --> 1920px)
+@media only screen and (min-width: 64.063em) and (max-width: 90em) {
+	
+}
+
+//large range (1025px --> 1440px)
+@media only screen and (min-width: 64.063em) and (max-width: 90em) {
+	
+}
+
+//medium range (641px --> 1024px)
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+
+}
+
+//small range (0px --> 640px)
+@media only screen and (min-width: 0em) and (max-width: 40em) {
+	
+}
+ */
+
+$default-border-radius: 0px;
+
+
+/* -------------------------- BEGIN FONT VARIABLES ------------------------- */
+
+$font1: 'Open Sans', sans-serif;
+$font2: Arial, Helvetica, sans-serif;
+$font3: 'Source Sans Pro', sans-serif;
+
+/* -------------------------- END FONT VARIABLES --------------------------- */
+
+
+/* -------------------------- BEGIN SASS PARTIALS -------------------------- */
+
+@import "cssreset";
+@import "colors";
+@import "foundation-overrides";
+@import "nav";
+
+/* -------------------------- END SASS PARTIALS ---------------------------- */
+
+
+html, body {
+	font-family: $font1;
+	padding: 0px;
+	margin: 0px;
+	background-color: $deloitte-blue;
+}
+
+.container-main {
+	min-height: 1000px;
+	margin-top: 2em;
+	margin-right: auto;
+	margin-bottom: 2em;
+	margin-left: auto;
+	padding: 0px;
+	max-width: 1100px;
+	background-image: url("../img/bg.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+

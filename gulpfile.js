@@ -9,7 +9,7 @@ var gulp = require('gulp'),
 
 //sources
 var jsSources = ['components/js/*.js'];
-var sassSources = ['components/sass/styles.scss'];
+var sassSources = ['components/scss/application.scss'];
 var htmlSources = ['/*.html'];
 //var jsonSources = ['js/*.json'];
 
@@ -26,9 +26,9 @@ gulp.task('js', function() {
 gulp.task('sass', function() {
   gulp.src(sassSources)
     .pipe(compass({
-      sass: 'components/sass',
+      sass: 'components/scss',
       image: 'img',
-      style: 'compressed'
+      style: 'nested'
     })
     .on('error', gutil.log))
     .pipe(gulp.dest('css'))
@@ -37,16 +37,10 @@ gulp.task('sass', function() {
 
 gulp.task('watch', function() {
   gulp.watch(jsSources, ['js']);
-  gulp.watch('components/sass/*.scss', ['sass']);
+  gulp.watch('components/scss/*.scss', ['sass']);
   //gulp.watch(jsonSources, ['json']);
 });
 
-gulp.task('connect', function () {
-	connect.server({
-		root: 'tw3',
-		livereload: true
-	});	
-});
 
 gulp.task('html', function () {
   	gulp.src(htmlSources)
@@ -65,4 +59,4 @@ gulp.task('html', function () {
 
 
 //runs all tasks through one command of 'gulp'
-gulp.task('default', ['js', 'sass', 'connect', 'watch']);
+gulp.task('default', ['js', 'sass', 'watch']);
