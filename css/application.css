@@ -99,6 +99,39 @@ table {
 .left-off-canvas-toggle {
   float: left; }
 
+/* line 26, ../components/scss/_foundation-overrides.scss */
+.left-off-canvas-menu ul {
+  padding: 0px 10px 0px 10px; }
+  /* line 29, ../components/scss/_foundation-overrides.scss */
+  .left-off-canvas-menu ul li {
+    float: left;
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px solid #8c8c8c;
+    color: white;
+    font-weight: 200 !important;
+    font-size: .8em;
+    font-family: Arial, Helvetica, sans-serif; }
+    /* line 39, ../components/scss/_foundation-overrides.scss */
+    .left-off-canvas-menu ul li:hover {
+      background-color: #919191;
+      cursor: pointer; }
+    /* line 44, ../components/scss/_foundation-overrides.scss */
+    .left-off-canvas-menu ul li span {
+      display: block;
+      float: left;
+      width: 15%;
+      height: 50px;
+      text-align: right;
+      padding: 14px 0px 0px 0px; }
+    /* line 53, ../components/scss/_foundation-overrides.scss */
+    .left-off-canvas-menu ul li p {
+      float: left;
+      width: 85%;
+      height: 50px;
+      text-align: left;
+      padding: 20px 0px 0px 10px; }
+
 /*
   _   _    ___     _____ ____    _  _____ ___ ___  _   _ 
  | \ | |  / \ \   / /_ _/ ___|  / \|_   _|_ _/ _ \| \ | |
@@ -111,80 +144,97 @@ table {
 .right-off-canvas-toggle {
   float: right; }
 
-/* line 15, ../components/scss/_nav.scss */
+/* line 14, ../components/scss/_nav.scss */
 .top-nav {
   width: 100%;
   height: 40px;
   padding: 0px; }
+  /* line 19, ../components/scss/_nav.scss */
+  .top-nav .top-nav-left {
+    float: left;
+    width: 25%;
+    height: 40px;
+    padding: 0px;
+    margin: 0px; }
+  /* line 27, ../components/scss/_nav.scss */
+  .top-nav .top-nav-center {
+    float: left;
+    width: 50%;
+    height: 40px;
+    padding: 0px;
+    margin: -5px 0px 0px 0px;
+    text-align: center; }
+  /* line 36, ../components/scss/_nav.scss */
+  .top-nav .top-nav-right {
+    float: left;
+    width: 25%;
+    height: 40px;
+    padding: 0px;
+    margin: 0px; }
 
-/* line 21, ../components/scss/_nav.scss */
-.top-nav-left {
-  float: left;
-  width: 25%;
-  height: 40px;
-  padding: 0px;
-  margin: 0px; }
-
-/* line 29, ../components/scss/_nav.scss */
-.top-nav-center {
-  float: left;
-  width: 50%;
-  height: 40px;
-  padding: 0px;
-  margin: 0px;
-  text-align: center; }
-
-/* line 38, ../components/scss/_nav.scss */
-.top-nav-right {
-  float: left;
-  width: 25%;
-  height: 40px;
-  padding: 0px;
-  margin: 0px; }
-
-/* line 46, ../components/scss/_nav.scss */
+/* line 45, ../components/scss/_nav.scss */
 .nav-box {
   float: left;
-  width: 250px;
-  height: 250px;
-  background-color: blue;
-  border: 1px solid white;
+  width: 200px;
+  height: 200px;
+  background-color: #b4b4b4;
+  border: 10px solid white;
   color: white;
   font-size: 2em; }
+  /* line 54, ../components/scss/_nav.scss */
+  .nav-box:hover {
+    background-color: #92d400;
+    border: 3px solid white;
+    color: white; }
+    /* line 59, ../components/scss/_nav.scss */
+    .nav-box:hover .nav-box-bottom {
+      padding: 0px 0px 0px 60px; }
+    /* line 63, ../components/scss/_nav.scss */
+    .nav-box:hover .nav-box-inner {
+      float: left;
+      width: 184px;
+      height: 182px;
+      border: 3px solid white;
+      margin: 5px 0px 0px 5px; }
+  /* line 72, ../components/scss/_nav.scss */
+  .nav-box .nav-box-inner {
+    float: left;
+    width: 170px;
+    height: 170px;
+    border: 3px solid white;
+    margin: 5px 0px 0px 5px; }
 
-/* line 57, ../components/scss/_nav.scss */
-#scrollableNav {
+/* line 81, ../components/scss/_nav.scss */
+.nav-box-top {
   width: 100%;
-  height: 330px;
-  position: relative; }
+  height: 70px;
+  text-align: center;
+  padding: 30px 20px 0px 15px; }
+  /* line 87, ../components/scss/_nav.scss */
+  .nav-box-top p {
+    font-size: .65em;
+    left: 1.3em; }
+  /* line 92, ../components/scss/_nav.scss */
+  .nav-box-top p.small-text {
+    font-size: .55em;
+    left: 1.3em; }
 
-/* Replace the last selector for the type of element you have in
-   your scroller. If you have div's use #makeMeScrollable div.scrollableArea div,
-   if you have links use #makeMeScrollable div.scrollableArea a and so on. */
-/* line 67, ../components/scss/_nav.scss */
-#scrollableNav div.scrollableArea img {
-  position: relative;
-  float: left;
-  margin: 0;
-  padding: 0;
-  /* If you don't want the images in the scroller to be selectable, try the following
-     block of code. It's just a nice feature that prevent the images from
-     accidentally becoming selected/inverted when the user interacts with the scroller. */
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -o-user-select: none;
-  user-select: none; }
+/* line 98, ../components/scss/_nav.scss */
+.nav-box-bottom {
+  width: 100%;
+  height: 130px;
+  text-align: center;
+  padding: 0px 0px 0px 50px; }
 
 /* You can alter this CSS in order to give Smooth Div Scroll your own look'n'feel */
 /* Invisible left hotspot */
-/* line 5, ../components/scss/smoothDivScroll.scss */
+/* line 4, ../components/scss/smoothDivScroll.scss */
 div.scrollingHotSpotLeft {
   	/* The hotspots have a minimum width of 100 pixels and if there is room the will grow
       and occupy 15% of the scrollable area (30% combined). Adjust it to your own taste. */
   min-width: 50px;
   width: 10%;
-  height: 250px;
+  height: 200px;
   	/* There is a big background image and it's used to solve some problems I experienced
       in Internet Explorer 6. */
   background-image: url(../img/big_transparent.gif);
@@ -197,7 +247,7 @@ div.scrollingHotSpotLeft {
   cursor: url(../img/cursors/cursor_arrow_left.png), url(../img/cursors/cursor_arrow_left.cur), w-resize; }
 
 /* Visible left hotspot */
-/* line 25, ../components/scss/smoothDivScroll.scss */
+/* line 23, ../components/scss/smoothDivScroll.scss */
 div.scrollingHotSpotLeftVisible {
   background-image: url(../img/arrow_left.gif);
   background-color: #fff;
@@ -212,11 +262,11 @@ div.scrollingHotSpotLeftVisible {
   /* Trigger "hasLayout" in Internet Explorer 6 or older versions */ }
 
 /* Invisible right hotspot */
-/* line 37, ../components/scss/smoothDivScroll.scss */
+/* line 34, ../components/scss/smoothDivScroll.scss */
 div.scrollingHotSpotRight {
   min-width: 50px;
   width: 10%;
-  height: 250px;
+  height: 200px;
   background-image: url(../img/big_transparent.gif);
   background-repeat: repeat;
   background-position: center center;
@@ -226,7 +276,7 @@ div.scrollingHotSpotRight {
   cursor: url(../img/cursors/cursor_arrow_right.png), url(../img/cursors/cursor_arrow_right.cur), e-resize; }
 
 /* Visible right hotspot */
-/* line 52, ../components/scss/smoothDivScroll.scss */
+/* line 48, ../components/scss/smoothDivScroll.scss */
 div.scrollingHotSpotRightVisible {
   background-image: url(../img/arrow_right.gif);
   background-color: #fff;
@@ -239,14 +289,14 @@ div.scrollingHotSpotRightVisible {
 /* The scroll wrapper is always the same width and height as the containing element (div).
    Overflow is hidden because you don't want to show all of the scrollable area.
 */
-/* line 66, ../components/scss/smoothDivScroll.scss */
+/* line 61, ../components/scss/smoothDivScroll.scss */
 div.scrollWrapper {
   position: relative;
   overflow: hidden;
   width: 100%;
   height: 100%; }
 
-/* line 74, ../components/scss/smoothDivScroll.scss */
+/* line 68, ../components/scss/smoothDivScroll.scss */
 div.scrollableArea {
   position: relative;
   width: auto;
@@ -258,7 +308,7 @@ html, body {
   font-family: "Open Sans", sans-serif;
   padding: 0px;
   margin: 0px;
-  background-color: #002776; }
+  background-color: #cecece; }
 
 /* line 72, ../components/scss/application.scss */
 .container-main {
@@ -271,4 +321,154 @@ html, body {
   max-width: 1100px;
   background-image: url("../img/bg.jpg");
   background-repeat: no-repeat;
-  background-size: cover; }
+  background-size: cover;
+  border: 3px solid white;
+  position: absolute;
+  left: 0%;
+  right: 0%; }
+
+/* line 89, ../components/scss/application.scss */
+.main-title {
+  float: left;
+  width: 100%;
+  height: 50px;
+  padding: 20px 0px 20px 0px;
+  position: absolute;
+  top: 200px;
+  right: 0%;
+  left: 0%; }
+  /* line 99, ../components/scss/application.scss */
+  .main-title span {
+    float: left;
+    width: 30%;
+    border-bottom: 1px solid #002776; }
+  /* line 105, ../components/scss/application.scss */
+  .main-title p {
+    float: left;
+    width: 40%;
+    font-weight: 600;
+    font-size: 1em;
+    text-align: center;
+    margin: -10px 0px 0px 0px; }
+
+/* line 115, ../components/scss/application.scss */
+.notes {
+  display: none;
+  background-color: #f9f6be;
+  width: 300px;
+  height: 600px;
+  border: 3px solid white;
+  position: absolute;
+  top: 50px;
+  right: 0px;
+  z-index: 1000;
+  -moz-box-shadow: -2px 0px 6px #444;
+  -webkit-box-shadow: -2px 0px 6px #444;
+  box-shadow: -2px 0px 6px #444; }
+  /* line 129, ../components/scss/application.scss */
+  .notes .notes-header {
+    height: 40px;
+    background-color: #eacf63;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    border-bottom: 3px solid white;
+    padding: 10px 15px 10px 20px; }
+    /* line 137, ../components/scss/application.scss */
+    .notes .notes-header span {
+      float: left;
+      width: 10%;
+      height: 40px; }
+    /* line 143, ../components/scss/application.scss */
+    .notes .notes-header p {
+      float: left;
+      width: 70%;
+      height: 40px;
+      text-align: left;
+      padding: 0px 0px 0px 4px;
+      font-size: .95em;
+      font-weight: 600; }
+    /* line 153, ../components/scss/application.scss */
+    .notes .notes-header aside {
+      float: left;
+      width: 20%;
+      height: 40px;
+      text-align: right; }
+      /* line 160, ../components/scss/application.scss */
+      .notes .notes-header aside img:hover {
+        cursor: pointer; }
+  /* line 167, ../components/scss/application.scss */
+  .notes .notes-body {
+    height: 540px;
+    background-color: #f9f6be;
+    font-size: .9em;
+    line-height: 1.3em;
+    padding: 15px 15px 10px 20px;
+    overflow-y: scroll; }
+    /* line 175, ../components/scss/application.scss */
+    .notes .notes-body article {
+      float: left;
+      width: 100%;
+      margin: 0px 0px 20px 0px; }
+      /* line 180, ../components/scss/application.scss */
+      .notes .notes-body article h2 {
+        font-weight: 600;
+        font-size: 1em;
+        color: black;
+        padding: 0px 0px 10px 0px; }
+      /* line 187, ../components/scss/application.scss */
+      .notes .notes-body article p {
+        font-size: .9em;
+        line-height: 1.4em; }
+
+/* line 195, ../components/scss/application.scss */
+#scrollableNav {
+  width: 100%;
+  height: 250px;
+  position: relative;
+  background-color: white;
+  padding: 25px 0px 20px 0px;
+  margin: 0px 0px 0px 0px;
+  border-top: 5px solid #8c8c8c;
+  border-bottom: 5px solid #8c8c8c;
+  position: absolute;
+  top: 250px;
+  right: 0%;
+  left: 0%; }
+  /* line 209, ../components/scss/application.scss */
+  #scrollableNav div.scrollableArea img {
+    position: relative;
+    float: left;
+    margin: 0em;
+    padding: 0em;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none; }
+
+/* line 222, ../components/scss/application.scss */
+.progress-bar {
+  width: 440px;
+  height: 50px;
+  margin-top: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: -.3em;
+  text-align: center;
+  position: absolute;
+  bottom: 50px;
+  right: 0%;
+  left: 0%; }
+
+/* line 236, ../components/scss/application.scss */
+footer {
+  width: 100%;
+  height: 50px;
+  position: relative;
+  bottom: 0em;
+  background-color: #4c4c4c;
+  border-top: 4px solid white;
+  padding: 10px 0px 0px 20px;
+  position: absolute;
+  left: 0%;
+  right: 0%; }

@@ -16,7 +16,7 @@ var htmlSources = ['/*.html'];
 //gulp task definitions
 gulp.task('js', function() {
   gulp.src(jsSources)
-    .pipe(concat('script.js'))
+    .pipe(concat('application.js'))
     //.pipe(browserify())
     .pipe(uglify())
     .pipe(gulp.dest('js'))
@@ -37,7 +37,7 @@ gulp.task('sass', function() {
 
 gulp.task('watch', function() {
   gulp.watch(jsSources, ['js']);
-  gulp.watch('components/scss/*.scss', ['sass']);
+  gulp.watch(sassSources, ['sass']);
   //gulp.watch(jsonSources, ['json']);
 });
 
