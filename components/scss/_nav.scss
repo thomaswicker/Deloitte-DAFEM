@@ -46,7 +46,7 @@
 	float: left;
 	width: 200px;
 	height: 200px;
-	background-color: $deloitte-mid-gray;
+	background-color: darken($deloitte-light-gray, 5%);
 	border: 10px solid white;
 	color: white;
 	font-size: 2em;
