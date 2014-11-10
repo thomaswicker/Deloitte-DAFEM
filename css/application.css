@@ -6,13 +6,41 @@
  |____/_/   \_\_|   |_____|_|  |_|
                                   
 */
+/*  
+
+----COMPASS MIXINS----
+ @include box-shadow($charcoal 3px 3px 5px); 
+ @include border-radius(0px);
+ @include transition(all 0.3s ease-in);
+ @include transform(rotate(0deg) skew(-10deg, -10deg));
+
+//xtra large range (1441px --> 1920px)
+@media only screen and (min-width: 64.063em) and (max-width: 90em) {
+	
+}
+
+//large range (1025px --> 1440px)
+@media only screen and (min-width: 64.063em) and (max-width: 90em) {
+	
+}
+
+//medium range (641px --> 1024px)
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+
+}
+
+//small range (0px --> 640px)
+@media only screen and (min-width: 0em) and (max-width: 40em) {
+	
+}
+ */
 /* -------------------------- BEGIN FONT VARIABLES ------------------------- */
 /* -------------------------- END FONT VARIABLES --------------------------- */
 /* -------------------------- BEGIN SASS PARTIALS -------------------------- */
 /* ========================================================
    BEGIN CSS RESET
    ======================================================== */
-/* line 18, ../components/scss/_cssreset.scss */
+/* line 6, ../components/scss/_cssreset.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -34,7 +62,7 @@ time, mark, audio, video {
   vertical-align: baseline; }
 
 /* HTML5 display-role reset for older browsers */
-/* line 29, ../components/scss/_cssreset.scss */
+/* line 28, ../components/scss/_cssreset.scss */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: block; }
@@ -51,7 +79,7 @@ ol, ul {
 blockquote, q {
   quotes: none; }
 
-/* line 46, ../components/scss/_cssreset.scss */
+/* line 45, ../components/scss/_cssreset.scss */
 blockquote:before, blockquote:after,
 q:before, q:after {
   content: '';
@@ -108,7 +136,7 @@ table {
     width: 100%;
     height: 50px;
     border-bottom: 1px solid #8c8c8c;
-    color: white;
+    color: #FFFFFF;
     font-weight: 200 !important;
     font-size: .8em;
     font-family: Arial, Helvetica, sans-serif; }
@@ -194,14 +222,14 @@ table {
       float: left;
       width: 184px;
       height: 182px;
-      border: 3px solid white;
+      border: 3px solid #FFFFFF;
       margin: 5px 0px 0px 5px; }
   /* line 72, ../components/scss/_nav.scss */
   .nav-box .nav-box-inner {
     float: left;
     width: 170px;
     height: 170px;
-    border: 3px solid white;
+    border: 3px solid #FFFFFF;
     margin: 5px 0px 0px 5px; }
 
 /* line 81, ../components/scss/_nav.scss */
@@ -212,11 +240,11 @@ table {
   padding: 30px 20px 0px 15px; }
   /* line 87, ../components/scss/_nav.scss */
   .nav-box-top p {
-    font-size: .65em;
+    font-size: .5em;
     left: 1.3em; }
   /* line 92, ../components/scss/_nav.scss */
   .nav-box-top p.small-text {
-    font-size: .55em;
+    font-size: .5em;
     left: 1.3em; }
 
 /* line 98, ../components/scss/_nav.scss */
@@ -302,17 +330,428 @@ div.scrollableArea {
   width: auto;
   height: 100%; }
 
+/*
+     _    _     _____ ____ _____ ____  
+    / \  | |   | ____|  _ \_   _/ ___| 
+   / _ \ | |   |  _| | |_) || | \___ \ 
+  / ___ \| |___| |___|  _ < | |  ___) |
+ /_/   \_\_____|_____|_| \_\|_| |____/ 
+                                                                                                                                                                                                                                                                              
+*/
+/* line 10, ../components/scss/_alert.scss */
+.alert-box {
+  width: 100%;
+  min-height: 50px;
+  background: rgba(146, 212, 0, 0.95);
+  padding: 5px 0px 5px 0px;
+  margin: 0px;
+  position: absolute;
+  z-index: 10000;
+  -moz-box-shadow: 0px 2px 5px #888;
+  -webkit-box-shadow: 0px 2px 5px #888;
+  box-shadow: 0px 2px 5px #888; }
+  /* line 22, ../components/scss/_alert.scss */
+  .alert-box .alert-box-left {
+    float: left;
+    width: 40px;
+    min-height: 50px;
+    text-align: center;
+    padding: 7px 0px 0px 8px; }
+  /* line 30, ../components/scss/_alert.scss */
+  .alert-box .alert-box-middle {
+    float: left;
+    width: calc(100% - 140px);
+    text-align: left;
+    min-height: 50px;
+    padding-left: 13px; }
+    /* line 37, ../components/scss/_alert.scss */
+    .alert-box .alert-box-middle .alert-box-middle-top {
+      font-size: 1.3rem;
+      text-transform: uppercase;
+      color: #FFFFFF;
+      padding-top: 5px;
+      font-weight: 600; }
+    /* line 45, ../components/scss/_alert.scss */
+    .alert-box .alert-box-middle .alert-box-middle-bottom {
+      font-size: 1rem;
+      color: #FFFFFF;
+      font-weight: 400;
+      font-style: italic; }
+      /* line 51, ../components/scss/_alert.scss */
+      .alert-box .alert-box-middle .alert-box-middle-bottom a {
+        color: #FFFFFF;
+        text-decoration: underline; }
+        /* line 55, ../components/scss/_alert.scss */
+        .alert-box .alert-box-middle .alert-box-middle-bottom a:hover {
+          color: #2b6421; }
+  /* line 62, ../components/scss/_alert.scss */
+  .alert-box .alert-box-right {
+    float: left;
+    width: 100px;
+    text-align: center;
+    padding: 12px 20px 0px 0px;
+    min-height: 50px; }
+    /* line 69, ../components/scss/_alert.scss */
+    .alert-box .alert-box-right #close-alert-btn {
+      width: 100px;
+      height: 25px;
+      background-image: url("../img/close-btn-up.png");
+      background-repeat: no-repeat; }
+      /* line 75, ../components/scss/_alert.scss */
+      .alert-box .alert-box-right #close-alert-btn:hover {
+        background-image: url("../img/close-btn-over.png");
+        cursor: pointer; }
+
+/* line 84, ../components/scss/_alert.scss */
+.hide-alert {
+  display: none; }
+
+/* line 2, ../components/scss/_footer.scss */
+footer {
+  width: 100%;
+  height: 50px;
+  position: relative;
+  bottom: 0em;
+  background-color: #4c4c4c;
+  border-top: 4px solid #FFFFFF;
+  padding: 10px 0px 0px 20px;
+  position: absolute;
+  left: 0%;
+  right: 0%; }
+  /* line 14, ../components/scss/_footer.scss */
+  footer .footer-left {
+    float: left;
+    width: 24.5%; }
+  /* line 19, ../components/scss/_footer.scss */
+  footer .footer-middle {
+    float: left;
+    width: 50%;
+    text-align: center; }
+    /* line 24, ../components/scss/_footer.scss */
+    footer .footer-middle a {
+      padding: 7px 5px 1px 5px;
+      border: 1px solid #999999;
+      background-color: none; }
+      /* line 29, ../components/scss/_footer.scss */
+      footer .footer-middle a:hover {
+        background-color: #92d400; }
+  /* line 35, ../components/scss/_footer.scss */
+  footer .footer-right {
+    float: left;
+    width: 25.5%; }
+
+/* line 3, ../components/scss/_IM.scss */
+.IM-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 10000000000000; }
+
+/* line 11, ../components/scss/_IM.scss */
+.IM-container-inner {
+  position: relative;
+  top: 10%;
+  width: 90%;
+  height: 70%;
+  margin-left: auto;
+  margin-right: auto; }
+
+/* line 20, ../components/scss/_IM.scss */
+.close-btn-IM {
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  right: 0px;
+  top: -32px;
+  background-image: url("../img/close-btn-IM_up.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 100000000000001; }
+  /* line 31, ../components/scss/_IM.scss */
+  .close-btn-IM:hover {
+    background-image: url("../img/close-btn-IM_over.png"); }
+
+/* line 36, ../components/scss/_IM.scss */
+.conversing-box {
+  float: left;
+  width: 24%;
+  height: 250px;
+  background-color: #FFFFFF;
+  left: 0px;
+  position: absolute;
+  border: 4px solid #FFFFFF;
+  padding: 0px; }
+  /* line 46, ../components/scss/_IM.scss */
+  .conversing-box h2 {
+    width: 100%;
+    height: 42px;
+    background-color: #00a1de;
+    color: #FFFFFF;
+    font-size: 1.1rem;
+    padding: 11px 0px 0px 15px; }
+  /* line 55, ../components/scss/_IM.scss */
+  .conversing-box .box-body {
+    width: 100%;
+    height: 200px;
+    background-color: #FFFFFF;
+    color: #FFFFFF;
+    font-size: 1rem;
+    padding: 0px 8px 0px 8px; }
+    /* line 63, ../components/scss/_IM.scss */
+    .conversing-box .box-body .top {
+      width: 100%;
+      height: 120px;
+      text-align: center;
+      padding: 10px 0px 0px 0px; }
+    /* line 70, ../components/scss/_IM.scss */
+    .conversing-box .box-body .bottom {
+      width: 100%;
+      height: 80px;
+      padding: 10px 0px 0px 22px;
+      border-top: 1px dashed #b4b4b4; }
+      /* line 76, ../components/scss/_IM.scss */
+      .conversing-box .box-body .bottom h3 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        color: #000000;
+        margin-bottom: 4px; }
+      /* line 83, ../components/scss/_IM.scss */
+      .conversing-box .box-body .bottom h4 {
+        font-size: .9rem;
+        font-style: italic;
+        color: #b4b4b4;
+        margin-bottom: 4px; }
+      /* line 90, ../components/scss/_IM.scss */
+      .conversing-box .box-body .bottom h5 {
+        font-size: .9rem;
+        color: #00a1de; }
+
+/* line 98, ../components/scss/_IM.scss */
+.questions-box {
+  float: left;
+  width: 74%;
+  height: 250px;
+  background-color: #FFFFFF;
+  right: 0px;
+  position: absolute;
+  border: 4px solid #FFFFFF; }
+  /* line 107, ../components/scss/_IM.scss */
+  .questions-box h2 {
+    width: 100%;
+    height: 42px;
+    background-color: #00a1de;
+    color: #FFFFFF;
+    font-size: 1.1rem;
+    padding: 11px 0px 0px 15px; }
+  /* line 116, ../components/scss/_IM.scss */
+  .questions-box .box-body {
+    width: 100%;
+    height: 200px;
+    background-color: #FFFFFF;
+    color: #FFFFFF;
+    font-size: .95rem;
+    overflow: auto;
+    padding: 10px 10px 0px 10px; }
+    /* line 125, ../components/scss/_IM.scss */
+    .questions-box .box-body .question {
+      float: left;
+      width: 100%;
+      height: auto;
+      padding: 0px 5px 15px 5px;
+      border-bottom: 1px dashed #b4b4b4;
+      font-size: .95rem;
+      line-height: 5rem; }
+      /* line 134, ../components/scss/_IM.scss */
+      .questions-box .box-body .question:hover {
+        background-color: #9ed8ee;
+        cursor: default; }
+        /* line 138, ../components/scss/_IM.scss */
+        .questions-box .box-body .question:hover .right {
+          color: #000000; }
+      /* line 143, ../components/scss/_IM.scss */
+      .questions-box .box-body .question .left {
+        float: left;
+        width: 4%;
+        text-align: center;
+        padding: 13px 0px 3px 0px; }
+      /* line 150, ../components/scss/_IM.scss */
+      .questions-box .box-body .question .right {
+        float: left;
+        width: 96%;
+        font-size: .95rem;
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 1.2rem;
+        padding: 15px 10px 0px 10px;
+        color: #8c8c8c; }
+
+/* line 163, ../components/scss/_IM.scss */
+.conversation-box {
+  float: left;
+  width: 100%;
+  height: 325px;
+  background-color: #FFFFFF;
+  position: absolute;
+  border: 4px solid #FFFFFF;
+  bottom: 0px; }
+  /* line 172, ../components/scss/_IM.scss */
+  .conversation-box h2 {
+    width: 100%;
+    height: 42px;
+    background-color: #00a1de;
+    color: #FFFFFF;
+    font-size: 1.1rem;
+    padding: 11px 0px 0px 15px; }
+  /* line 181, ../components/scss/_IM.scss */
+  .conversation-box .box-body {
+    width: 100%;
+    height: 274px;
+    background-color: #FFFFFF;
+    color: #FFFFFF;
+    font-size: 1rem;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding: 15px 30px 10px 20px; }
+    /* line 191, ../components/scss/_IM.scss */
+    .conversation-box .box-body .conversation-block-1 {
+      float: left;
+      width: 100%;
+      min-height: 50px;
+      margin-bottom: 10px;
+      padding: 15px 20px 15px 20px;
+      font-size: .95rem;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 300;
+      line-height: 1.2rem;
+      background-color: #92d400;
+      position: relative; }
+      /* line 204, ../components/scss/_IM.scss */
+      .conversation-box .box-body .conversation-block-1 span {
+        color: #333333;
+        font-weight: 600; }
+      /* line 209, ../components/scss/_IM.scss */
+      .conversation-box .box-body .conversation-block-1:before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        margin-top: -15px;
+        left: -30px;
+        border: solid 15px transparent;
+        border-right-color: #92d400;
+        z-index: 1; }
+    /* line 221, ../components/scss/_IM.scss */
+    .conversation-box .box-body .conversation-block-2 {
+      float: left;
+      width: 100%;
+      min-height: 50px;
+      margin-bottom: 10px;
+      padding: 15px 20px 15px 20px;
+      font-size: .95rem;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 300;
+      line-height: 1.2rem;
+      background-color: #a7a7a7;
+      position: relative; }
+      /* line 234, ../components/scss/_IM.scss */
+      .conversation-box .box-body .conversation-block-2 span {
+        color: #333333;
+        font-weight: 600; }
+      /* line 239, ../components/scss/_IM.scss */
+      .conversation-box .box-body .conversation-block-2:after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        margin-top: -15px;
+        right: -30px;
+        border: solid 15px transparent;
+        border-left-color: #b4b4b4;
+        z-index: 1; }
+    /* line 251, ../components/scss/_IM.scss */
+    .conversation-box .box-body .conversation-block-3 {
+      float: left;
+      width: 100%;
+      min-height: 50px;
+      margin-bottom: 10px;
+      padding: 15px 20px 15px 20px;
+      position: relative; }
+      /* line 259, ../components/scss/_IM.scss */
+      .conversation-box .box-body .conversation-block-3 div {
+        float: left;
+        padding-right: 5px; }
+      /* line 264, ../components/scss/_IM.scss */
+      .conversation-box .box-body .conversation-block-3 p {
+        float: left;
+        color: #002776;
+        text-decoration: none; }
+        /* line 269, ../components/scss/_IM.scss */
+        .conversation-box .box-body .conversation-block-3 p a {
+          text-decoration: underline;
+          font-style: italic;
+          color: #00a1de; }
+          /* line 274, ../components/scss/_IM.scss */
+          .conversation-box .box-body .conversation-block-3 p a:hover {
+            cursor: pointer;
+            color: #002776; }
+
+/* line 284, ../components/scss/_IM.scss */
+.hide-modal {
+  display: none; }
+
+/* CUSTOM CSS CHECKBOXES */
+/* line 289, ../components/scss/_IM.scss */
+.squaredOne {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  margin: 20px auto;
+  background: #fcfff4;
+  border: 1px solid #b4b4b4; }
+  /* line 297, ../components/scss/_IM.scss */
+  .squaredOne:hover {
+    border: 2px solid #006a92; }
+  /* line 301, ../components/scss/_IM.scss */
+  .squaredOne label {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    cursor: pointer;
+    background: linear-gradient(top, #222 0%, #45484d 100%); }
+    /* line 310, ../components/scss/_IM.scss */
+    .squaredOne label:after {
+      content: '';
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      top: -1px;
+      left: -9px;
+      background: #00a1de;
+      opacity: 1; }
+    /* line 320, ../components/scss/_IM.scss */
+    .squaredOne label:hover::after {
+      opacity: 1;
+      top: -2px;
+      left: -10px;
+      border: 2px solid #006a92; }
+  /* line 327, ../components/scss/_IM.scss */
+  .squaredOne input[type=checkbox] {
+    visibility: hidden; }
+    /* line 329, ../components/scss/_IM.scss */
+    .squaredOne input[type=checkbox]:checked + label:after {
+      opacity: 0; }
+
 /* -------------------------- END SASS PARTIALS ---------------------------- */
-/* line 65, ../components/scss/application.scss */
+/* line 68, ../components/scss/application.scss */
 html, body {
   font-family: "Open Sans", sans-serif;
   padding: 0px;
   margin: 0px;
   background-color: #cecece; }
 
-/* line 72, ../components/scss/application.scss */
+/* line 75, ../components/scss/application.scss */
 .container-main {
-  min-height: 800px;
+  min-height: 600px;
   margin-top: 2em;
   margin-right: auto;
   margin-bottom: 2em;
@@ -322,12 +761,12 @@ html, body {
   background-image: url("../img/bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  border: 3px solid white;
+  border: 3px solid #FFFFFF;
   position: absolute;
   left: 0%;
   right: 0%; }
 
-/* line 89, ../components/scss/application.scss */
+/* line 92, ../components/scss/application.scss */
 .main-title {
   float: left;
   width: 100%;
@@ -337,12 +776,12 @@ html, body {
   top: 200px;
   right: 0%;
   left: 0%; }
-  /* line 99, ../components/scss/application.scss */
+  /* line 102, ../components/scss/application.scss */
   .main-title span {
     float: left;
     width: 30%;
     border-bottom: 1px solid #002776; }
-  /* line 105, ../components/scss/application.scss */
+  /* line 108, ../components/scss/application.scss */
   .main-title p {
     float: left;
     width: 40%;
@@ -351,13 +790,13 @@ html, body {
     text-align: center;
     margin: -10px 0px 0px 0px; }
 
-/* line 115, ../components/scss/application.scss */
+/* line 118, ../components/scss/application.scss */
 .notes {
   display: none;
   background-color: #f9f6be;
   width: 300px;
   height: 600px;
-  border: 3px solid white;
+  border: 3px solid #FFFFFF;
   position: absolute;
   top: 50px;
   right: 0px;
@@ -365,20 +804,20 @@ html, body {
   -moz-box-shadow: -2px 0px 6px #444;
   -webkit-box-shadow: -2px 0px 6px #444;
   box-shadow: -2px 0px 6px #444; }
-  /* line 129, ../components/scss/application.scss */
+  /* line 132, ../components/scss/application.scss */
   .notes .notes-header {
     height: 40px;
     background-color: #eacf63;
     font-size: 1.2em;
     text-transform: uppercase;
-    border-bottom: 3px solid white;
+    border-bottom: 3px solid #FFFFFF;
     padding: 10px 15px 10px 20px; }
-    /* line 137, ../components/scss/application.scss */
+    /* line 140, ../components/scss/application.scss */
     .notes .notes-header span {
       float: left;
       width: 10%;
       height: 40px; }
-    /* line 143, ../components/scss/application.scss */
+    /* line 146, ../components/scss/application.scss */
     .notes .notes-header p {
       float: left;
       width: 70%;
@@ -387,16 +826,16 @@ html, body {
       padding: 0px 0px 0px 4px;
       font-size: .95em;
       font-weight: 600; }
-    /* line 153, ../components/scss/application.scss */
+    /* line 156, ../components/scss/application.scss */
     .notes .notes-header aside {
       float: left;
       width: 20%;
       height: 40px;
       text-align: right; }
-      /* line 160, ../components/scss/application.scss */
+      /* line 163, ../components/scss/application.scss */
       .notes .notes-header aside img:hover {
         cursor: pointer; }
-  /* line 167, ../components/scss/application.scss */
+  /* line 170, ../components/scss/application.scss */
   .notes .notes-body {
     height: 540px;
     background-color: #f9f6be;
@@ -404,28 +843,28 @@ html, body {
     line-height: 1.3em;
     padding: 15px 15px 10px 20px;
     overflow-y: scroll; }
-    /* line 175, ../components/scss/application.scss */
+    /* line 178, ../components/scss/application.scss */
     .notes .notes-body article {
       float: left;
       width: 100%;
       margin: 0px 0px 20px 0px; }
-      /* line 180, ../components/scss/application.scss */
+      /* line 183, ../components/scss/application.scss */
       .notes .notes-body article h2 {
         font-weight: 600;
         font-size: 1em;
         color: black;
         padding: 0px 0px 10px 0px; }
-      /* line 187, ../components/scss/application.scss */
+      /* line 190, ../components/scss/application.scss */
       .notes .notes-body article p {
         font-size: .9em;
         line-height: 1.4em; }
 
-/* line 195, ../components/scss/application.scss */
+/* line 198, ../components/scss/application.scss */
 #scrollableNav {
   width: 100%;
   height: 250px;
   position: relative;
-  background-color: white;
+  background-color: #FFFFFF;
   padding: 25px 0px 20px 0px;
   margin: 0px 0px 0px 0px;
   border-top: 5px solid #8c8c8c;
@@ -434,7 +873,7 @@ html, body {
   top: 250px;
   right: 0%;
   left: 0%; }
-  /* line 209, ../components/scss/application.scss */
+  /* line 212, ../components/scss/application.scss */
   #scrollableNav div.scrollableArea img {
     position: relative;
     float: left;
@@ -446,7 +885,7 @@ html, body {
     -o-user-select: none;
     user-select: none; }
 
-/* line 222, ../components/scss/application.scss */
+/* line 225, ../components/scss/application.scss */
 .progress-bar {
   width: 440px;
   height: 50px;
@@ -459,16 +898,3 @@ html, body {
   bottom: 50px;
   right: 0%;
   left: 0%; }
-
-/* line 236, ../components/scss/application.scss */
-footer {
-  width: 100%;
-  height: 50px;
-  position: relative;
-  bottom: 0em;
-  background-color: #4c4c4c;
-  border-top: 4px solid white;
-  padding: 10px 0px 0px 20px;
-  position: absolute;
-  left: 0%;
-  right: 0%; }

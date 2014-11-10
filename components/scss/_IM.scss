@@ -1,0 +1,333 @@
+
+
+.IM-container {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, .8);
+	z-index: 10000000000000;
+}
+
+.IM-container-inner {
+	position: relative;
+	top: 10%;
+	width: 90%;
+	height: 70%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.close-btn-IM {
+	width: 22px;
+	height: 22px;
+	position: absolute;
+	right: 0px;
+	top: -32px;
+	background-image: url("../img/close-btn-IM_up.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	z-index: 100000000000001;
+
+	&:hover {
+		background-image: url("../img/close-btn-IM_over.png");
+	}
+}
+
+.conversing-box {
+	float: left;
+	width: 24%;
+	height: 250px;
+	background-color: $white;
+	left: 0px;
+	position: absolute;
+	border: 4px solid $white;
+	padding: 0px;
+
+	h2 {
+		width: 100%;
+		height: 42px;
+		background-color: $deloitte-mid-blue;
+		color: $white;
+		font-size: 1.1rem;
+		padding: 11px 0px 0px 15px;
+	}
+
+	.box-body {
+		width: 100%;
+		height: 200px;
+		background-color: $white;
+		color: $white;
+		font-size: 1rem;
+		padding: 0px 8px 0px 8px;
+
+		.top {
+			width: 100%;
+			height: 120px;
+			text-align: center;
+			padding: 10px 0px 0px 0px;
+		}	
+
+		.bottom {
+			width: 100%;
+			height: 80px;
+			padding: 10px 0px 0px 22px;
+			border-top: 1px dashed $deloitte-mid-gray;
+
+			h3 {
+				font-size: 1.1rem;
+				font-weight: bold;
+				color: $black;
+				margin-bottom: 4px;
+			}
+
+			h4 {
+				font-size: .9rem;
+				font-style: italic;
+				color: $deloitte-mid-gray;
+				margin-bottom: 4px;
+			}
+
+			h5 {
+				font-size: .9rem;
+				color: $deloitte-mid-blue;
+			}
+		}
+	}
+}
+
+.questions-box {
+	float: left;
+	width: 74%;
+	height: 250px;
+	background-color: $white;
+	right: 0px;
+	position: absolute;
+	border: 4px solid $white;
+
+	h2 {
+		width: 100%;
+		height: 42px;
+		background-color: $deloitte-mid-blue;
+		color: $white;
+		font-size: 1.1rem;
+		padding: 11px 0px 0px 15px;
+	}
+
+	.box-body {
+		width: 100%;
+		height: 200px;
+		background-color: $white;
+		color: $white;
+		font-size: .95rem;
+		overflow: auto;
+		padding: 10px 10px 0px 10px;
+
+		.question {
+			float: left;
+			width: 100%;
+			height: auto;
+			padding: 0px 5px 15px 5px;
+			border-bottom: 1px dashed $deloitte-mid-gray;
+			font-size: .95rem;
+			line-height: 5rem;
+
+			&:hover {
+				background-color: lighten($deloitte-light-blue, 10%);
+				cursor: default;
+
+				.right {
+					color: $black;
+				}
+			}
+
+			.left {
+				float: left;
+				width: 4%;
+				text-align: center;
+				padding: 13px 0px 3px 0px;
+			}
+
+			.right {
+				float: left;
+				width: 96%;
+				font-size: .95rem;
+				font-family: $font2;
+				line-height: 1.2rem;
+				padding: 15px 10px 0px 10px;
+				color: $deloitte-dark-gray;
+			}
+		}	
+	}
+}
+
+.conversation-box {
+	float: left;
+	width: 100%;
+	height: 325px;
+	background-color: $white;
+	position: absolute;
+	border: 4px solid $white;
+	bottom: 0px;
+
+	h2 {
+		width: 100%;
+		height: 42px;
+		background-color: $deloitte-mid-blue;
+		color: $white;
+		font-size: 1.1rem;
+		padding: 11px 0px 0px 15px;
+	}
+
+	.box-body {
+		width: 100%;
+		height: 274px;
+		background-color: $white;
+		color: $white;
+		font-size: 1rem;
+		overflow-y: scroll;
+		overflow-x: hidden;
+		padding: 15px 30px 10px 20px;
+
+		.conversation-block-1 {
+			float: left;
+			width: 100%;
+			min-height: 50px;
+			margin-bottom: 10px;
+			padding: 15px 20px 15px 20px;
+			font-size: .95rem;
+			font-family: $font2;
+			font-weight: 300;
+			line-height: 1.2rem;
+			background-color: $deloitte-green;
+			position: relative;
+
+			span {
+				color: #333333;
+				font-weight: 600;
+			}
+
+			&:before {
+			    content: "";
+			    position: absolute;
+			    top: 50%;                         // half way down (vertical center).
+			    margin-top: -15px;                // adjust position, arrow has a height of 30px. 
+			    left:-30px;
+			    border: solid 15px transparent;
+			    border-right-color: $deloitte-green;
+			    z-index: 1;
+			}
+		}
+
+		.conversation-block-2 {
+			float: left;
+			width: 100%;
+			min-height: 50px;
+			margin-bottom: 10px;
+			padding: 15px 20px 15px 20px;
+			font-size: .95rem;
+			font-family: $font2;
+			font-weight: 300;
+			line-height: 1.2rem;
+			background-color: darken($deloitte-mid-gray, 5%);
+			position: relative;
+
+			span {
+				color: #333333;
+				font-weight: 600;
+			}
+
+			&:after {
+			    content: "";
+			    position: absolute;
+			    top: 50%;                         // half way down (vertical center).
+			    margin-top: -15px;                // adjust position, arrow has a height of 30px. 
+			    right:-30px;
+			    border: solid 15px transparent;
+			    border-left-color: $deloitte-mid-gray;
+			    z-index: 1;
+			}
+		}
+
+		.conversation-block-3 {
+			float: left;
+			width: 100%;
+			min-height: 50px;
+			margin-bottom: 10px;
+			padding: 15px 20px 15px 20px;
+			position: relative;
+
+			div {
+				float: left;
+				padding-right: 5px;
+			}
+
+			p {
+				float: left;
+				color: $deloitte-blue;
+				text-decoration: none;
+
+				a {
+					text-decoration: underline;
+					font-style: italic;
+					color: $deloitte-mid-blue;
+
+					&:hover {
+						cursor: pointer;
+						color: $deloitte-blue;
+					}
+				}
+			}
+		}
+	}	
+}
+
+.hide-modal {
+	display: none;
+}
+
+/* CUSTOM CSS CHECKBOXES */
+.squaredOne {
+	width: 20px;
+	height: 20px;
+	position: relative;
+	margin: 20px auto;
+	background: #fcfff4;
+	border: 1px solid $deloitte-mid-gray;
+
+	&:hover {
+		border: 2px solid darken($deloitte-mid-blue, 15%);
+	}
+
+  label {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    cursor: pointer;
+    background: linear-gradient(top, #222 0%, #45484d 100%);
+
+    &:after {
+      content: '';
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      top: -1px;
+      left: -9px;
+      background: $deloitte-mid-blue;
+      opacity: 1;
+    }
+    &:hover::after {
+      opacity: 1;
+      top: -2px;
+      left: -10px;
+	  border: 2px solid darken($deloitte-mid-blue, 15%);
+    }
+  }
+  input[type=checkbox] {
+    visibility: hidden;
+    &:checked + label:after {
+      opacity: 0;
+    }   
+  } 
+}

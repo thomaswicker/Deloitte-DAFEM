@@ -24,8 +24,15 @@ $(document).ready(function () {
 		touchScrolling: true,
 	});
 
+	//JS for off canvas toggle
 	$('.right-off-canvas-toggle').click(function() {
     $('.notes').slideToggle('fast');
 	    return false;
 	});
+
+	//JS for close alert button
+	$('#close-alert-btn').click(function() {
+		$('.alert-box').addClass( "hide-alert" );
+	});
+	
 });

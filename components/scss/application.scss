@@ -8,7 +8,7 @@
 */
 
 @charset "UTF-8";
-@import "compass";
+@charset "compass";
 
 /*  
 
@@ -58,6 +58,9 @@ $font3: 'Source Sans Pro', sans-serif;
 @import "foundation-overrides";
 @import "nav";
 @import "smoothDivScroll";
+@import "alert";
+@import "footer";
+@import "IM";
 
 /* -------------------------- END SASS PARTIALS ---------------------------- */
 
@@ -70,7 +73,7 @@ html, body {
 }
 
 .container-main {
-	min-height: 800px;
+	min-height: 600px;
 	margin-top: 2em;
 	margin-right: auto;
 	margin-bottom: 2em;
@@ -231,18 +234,5 @@ html, body {
 	bottom: 50px;
 	right: 0%;
 	left: 0%;
-}
-
-footer {
-	width: 100%;
-	height: 50px;
-	position: relative;
-	bottom: 0em;
-	background-color: darken($deloitte-dark-gray, 25%);
-	border-top: 4px solid $white;
-	padding: 10px 0px 0px 20px;
-	position: absolute;
-	left: 0%;
-	right: 0%;
 }
 

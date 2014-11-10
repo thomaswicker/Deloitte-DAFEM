@@ -1,0 +1,86 @@
+/*
+     _    _     _____ ____ _____ ____  
+    / \  | |   | ____|  _ \_   _/ ___| 
+   / _ \ | |   |  _| | |_) || | \___ \ 
+  / ___ \| |___| |___|  _ < | |  ___) |
+ /_/   \_\_____|_____|_| \_\|_| |____/ 
+                                                                                                                                                                                                                                                                              
+*/
+
+.alert-box {
+	width: 100%;
+	min-height: 50px;
+	background: rgba($deloitte-green, 0.95);
+	padding: 5px 0px 5px 0px;
+	margin: 0px;
+	position: absolute;
+	z-index: 10000;
+	-moz-box-shadow: 0px 2px 5px #888;
+	-webkit-box-shadow: 0px 2px 5px #888;
+	box-shadow: 0px 2px 5px #888;
+
+	.alert-box-left {
+		float: left;
+		width: 40px;
+		min-height: 50px;
+		text-align: center;
+		padding: 7px 0px 0px 8px;
+	}
+
+	.alert-box-middle {
+		float: left;
+		width: calc(100% - 140px);
+		text-align: left;
+		min-height: 50px;
+		padding-left: 13px;
+
+		.alert-box-middle-top {
+			font-size: 1.3rem;
+			text-transform: uppercase;
+			color: $white;
+			padding-top: 5px;
+			font-weight: 600;
+		}
+
+		.alert-box-middle-bottom {
+			font-size: 1rem;
+			color: $white;
+			font-weight: 400;
+			font-style: italic;
+
+			a {
+				color: $white;
+				text-decoration: underline;
+
+				&:hover {
+					color: darken($deloitte-dark-green, 10%);
+				}
+			}
+		}
+	}
+
+	.alert-box-right {
+		float: left;
+		width: 100px;
+		text-align: center;
+		padding: 12px 20px 0px 0px;
+		min-height: 50px;
+
+		#close-alert-btn {
+			width: 100px;
+			height: 25px;
+			background-image: url("../img/close-btn-up.png");
+			background-repeat: no-repeat;
+
+			&:hover {
+				background-image: url("../img/close-btn-over.png");
+				cursor: pointer;
+			}
+		}
+		
+	}
+}
+
+.hide-alert {
+	display: none;
+}
